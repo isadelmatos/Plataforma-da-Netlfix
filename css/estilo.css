@@ -1,0 +1,520 @@
+:root {
+    --cinza-borda: #222;
+    --vermelho-netflix: #e50914;
+    --background-faq: #303030;
+    --cinza-footer: #757575;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+body {
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('../img/background.jpg');
+    width: 100%;
+    height: 740px;
+    border-bottom: 9px solid var(--cinza-borda);
+}
+
+/* estilos do topo de navegação ------------------------------------------------------------------------------ */
+
+.topo-nav .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:0 auto;
+    padding-top: 2rem;
+}
+
+.seleciona-linguagem-e-login {
+    display: flex;
+    align-items: center;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-globo {
+    position: absolute;
+    width: 10%;
+    top: 0;
+    left: 0.5rem;
+    pointer-events: none;
+}
+
+.icon-seta {
+    position: absolute;
+    width: 12%;
+    top: 0;
+    left: 5.8rem;
+    pointer-events: none; 
+}
+
+.select-lang {
+    appearance: none;
+    margin-right: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background: none;
+    color: #FFF;
+    font-size: 0.9em;
+    border: 0.1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+}
+
+.option-lang {
+    background-color: #808080;
+}
+
+.botao-login {
+    height: 30px;
+    padding: 0 1rem;
+    background-color: var(--vermelho-netflix);
+    color: #FFF;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* estilos da seção de inicio/principal ------------------------------------------------------------------------------ */
+
+.secao-principal {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.texto {
+    font-family: 'Netflix Sans';
+    color: #FFF;
+}
+
+.titulo-1{
+    font-size: 3.75rem;
+    font-weight: 600;
+}
+
+.sub-titulo-1{
+    margin: 1.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.secao-principal .titulo-1, .secao-principal .sub-titulo-1 {
+    max-width: 700px;
+    text-align: center;
+}
+
+.texto-formulario {
+    font-weight: 200;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+}
+
+.input-email-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 0;
+}
+
+.email {
+    width: 470px;
+    height: 70px;
+    font-size: 1em;
+    color: #000;
+    padding: 0 0.5em;
+}
+
+.botao-email {
+    background-color: var(--vermelho-netflix);
+    border: none;
+    height: 70px;
+    font-size: 1.5rem;
+    padding: 0 2em;
+    cursor: pointer;
+}
+
+/* seções vantagens netflix ------------------------------------------------------------------------------ */
+
+.secao-aproveite-na-tv, .secao-baixe-offline, .secao-devices, .secao-perfil-criancas {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    border-bottom: 9px solid var(--cinza-borda);
+}
+
+.secao-aproveite-na-tv, .secao-devices {
+    justify-content: center;
+}
+
+.secao-baixe-offline {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.secao-perfil-criancas {
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.textos-aproveite-na-tv, .textos-baixe-offline, .textos-assista-quando-quiser, .textos-crie-perfis-p-criancas {
+    max-width: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.titulo-2 {
+    font-size: 3.25em;
+    font-weight: 600;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    max-width: 525px;
+}
+
+.sub-titulo-2 {
+    font-size: 1.75em;
+}
+
+.tv-video, .mobile-celular, .devices, .perfil-infantil {
+    width: 30%;
+}
+
+.imagem-tv, .imagem-celular, .imagem-dispositivos, .imagem-perfil-infantil {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.tv-video, .devices {
+    position: relative;
+}
+
+.video-tv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 75%;
+    max-height: 60%;
+    top: 19%;
+    left: 14%;
+    object-fit: contain;
+}
+
+.video-devices {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 62%;
+    max-height: 47%;
+    top: 12%;
+    left: 18%;
+    object-fit: contain;
+}
+
+/* estilos do faq ------------------------------------------------------------------------------ */
+
+.titulo-faq {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 5rem 0 2rem 0;
+}
+
+.faq {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 9px solid var(--cinza-borda);
+}
+
+.faq-container {
+    max-width: 52rem;
+    padding: 2rem;
+}
+
+.item-pergunta {
+    background-color: var(--background-faq);
+    margin-bottom: 0.5rem;
+}
+
+.faq-container .perguntas-link{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    font-size: 1.65em;
+    padding: 1.25rem 2rem;
+}
+
+ion-icon {
+    color: #FFF;
+    font-size: 35px;
+  }
+
+.perguntas-link .close-outline {
+    display: none;
+}
+
+.respostas {
+    max-height: 0;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 300ms;
+}
+
+.respostas::before {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.respostas p {
+    font-size: 1.65em;
+    padding: 2rem;
+}
+
+.item-pergunta:target .respostas {
+    overflow: visible;
+    max-height: 20rem;
+}
+
+.item-pergunta:target .perguntas-link .add-outline {
+    display: none;
+}
+
+.item-pergunta:target .perguntas-link .close-outline {
+    display: block;
+}
+
+.formulario-faq {
+    padding: 2rem 0 4rem 0;
+}
+
+/* estilos do rodape ------------------------------------------------------------------------------ */
+
+.rodape-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.article-duvidas {
+    margin-bottom: 2.5rem;
+}
+
+.texto-2 {
+    font-family: 'Netflix Sans';
+    color: var(--cinza-footer);
+    font-weight: 10;
+}
+
+.texto-2 a {
+    text-decoration: none;
+    color: var(--cinza-footer);
+}
+
+.texto-2 a:hover {
+    text-decoration: underline;
+}
+
+.lista-links-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.item-lista {
+    width: 20%;
+    padding-right: 2rem;
+    padding-bottom: 1.25rem;
+}
+
+.icon-globo-2 {
+    position: absolute;
+    width: 12%;
+    top: 0.5rem;
+    left: 0.5rem;
+    pointer-events: none;
+    color: var(--cinza-footer)
+}
+
+.icon-seta-2 {
+    position: absolute;
+    width: 10%;
+    top: 0.5rem;
+    left: 7.5rem;
+    pointer-events: none;
+    color: var(--cinza-footer)
+}
+
+.select-lang-2 {
+    appearance: none;
+    margin-right: 1.5rem;
+    padding: 1rem 1.7rem 1rem 2.7rem;
+    background: none;
+    color: var(--cinza-footer);
+    font-size: 1em;
+    border: 0.2px solid rgba(117, 117, 117, 0.3);
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.option-lang-2 {
+    background-color: #000;
+}
+
+.creditos {
+    border-top: 0.5px solid var(--cinza-footer);
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.logo-github {
+    width: 2.5%;
+    vertical-align: middle;
+}
+
+/* Responsividade - dispositivos mobile ------------------------------------------------------------------ */
+
+@media(max-width: 720px) {
+    .background {
+        height: 500px;
+    }
+
+    .logo {
+        width: 80px;
+        margin-right: 1rem;
+    }
+
+    .icon-globo, .icon-seta {
+        top: -0.2rem;
+    }
+
+    .select-lang {
+        font-size: 0.9em;
+        margin-right: 0.5rem;
+        padding: 0.3rem 1.6rem;
+
+    }
+
+    .botao-login {
+        height: 30px;
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .secao-principal {
+        flex-flow: column;
+    }
+
+    .titulo-1, .sub-titulo-1 {
+        max-width: 640px;
+    }
+
+    .titulo-1 {
+        font-size: 1.75rem;
+    }
+
+    .sub-titulo-1, .texto-formulario {
+        font-size: 1rem;
+    }
+    .texto-formulario {
+        max-width: 400px;
+    }
+
+    .input-email-button {
+        flex-direction: column;
+    }
+
+    .email {
+        width: 90%;
+        height: 40px;
+    }
+    .botao-email {
+        height: 40px;
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    .secao-aproveite-na-tv, .secao-baixe-offline, .secao-devices, .secao-perfil-criancas {
+        flex-direction: column;
+        align-items: center;
+    }
+    .textos-aproveite-na-tv, .textos-baixe-offline, .textos-assista-quando-quiser, .textos-crie-perfis-p-criancas {
+        max-width: 504px;
+        text-align: center;
+        align-items: center;
+        padding-right: 0;
+    }
+    .titulo-2 {
+        font-size: 2em;
+        margin-right: initial;
+        max-width: 465px;
+    }
+    .sub-titulo-2 {
+        font-size: 1.5rem;
+    }
+    .tv-video, .mobile-celular, .devices, .perfil-infantil {
+        width: 80%;
+    }
+
+    .titulo-faq {
+        font-size: 1.9rem;
+        padding: 5rem 0 0 0;
+    }
+
+    .item-pergunta:target .respostas {
+        max-height: 57rem;
+    }
+
+    .faq-container .perguntas-link, .respostas p {
+        font-size: 1.25rem;
+    }
+
+    .rodape-container {
+        max-width: 380px;
+        padding: 5rem 2.5rem
+
+    }
+    .article-duvidas {
+        margin-right: auto;
+    }
+    .item-lista {
+        width: 40%;
+        padding-right: 1rem;
+    }
+
+    .logo-github {
+        width: 20px;
+    }
+}
