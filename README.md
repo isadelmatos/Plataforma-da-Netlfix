@@ -1,6 +1,6 @@
 # Plataforma-da-Netlfix <br>
 
-##Atenção: todos os direitos reservados a netflix. O site foi criado apenas para fins de aprendizagem.
+## Atenção: todos os direitos reservados a netflix. O site foi criado apenas para fins de aprendizagem.
 
 ## Demonstração do resultado final:
 - Responsividade
